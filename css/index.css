@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    background-color: #0f0f0f;
+    color: #f2f2f2;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(15, 15, 15, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #00aaff;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    height: 45px;         
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 0 4px #00aaff); 
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px #00aaff);
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #00aaff;
+}
+
+/* CONTENIDO */
+.contenido {
+    height: 100vh;
+    background: linear-gradient(120deg, #001f3f, #0f0f0f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.contenido-texto h1 {
+    font-size: 4rem;
+    color: #00aaff;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.contenido-texto p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+.btn {
+    display: inline-block;
+    background: #00aaff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0077cc;
+}
+
+/* SECTION ABAJO */
+.section {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.section h2 {
+    color: #00aaff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.section.abajo{
+    background-color: #1a1a1a;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.social a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contenido-texto h1 {
+        font-size: 2.8rem;
+    }
+    .logo img {
+        height: 35px;
+    }
+}
